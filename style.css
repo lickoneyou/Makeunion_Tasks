@@ -161,6 +161,16 @@ main {
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
+  margin-bottom: 8px;
+}
+
+.cardDescription li {
+  margin-bottom: 8px;
+}
+
+.cardDescription:last-child,
+.cardDescription li:last-child {
+  margin-bottom: 0;
 }
 
 /* card borders */
@@ -206,4 +216,10 @@ main {
   background-image: url('./assets/img/emoji/Quote.png');
   min-width: 23.156px;
   height: 20px;
+}
+
+.aboutSite {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
