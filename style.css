@@ -5,9 +5,10 @@ body {
   font-family: 'Inter', sans-serif;
   display: grid;
   grid-template-columns: 300px 1fr;
+  column-gap: 20px;
 }
 
- /* aside */
+/* aside */
 
 aside {
   display: flex;
@@ -64,7 +65,7 @@ aside {
   margin-bottom: 10px;
 }
 
-.userSocialContacts{
+.userSocialContacts {
   padding-bottom: 47px;
 }
 
@@ -85,4 +86,42 @@ aside {
   font-style: normal;
   font-weight: 400;
   line-height: 155%;
+}
+
+/* main */
+
+.aboutSelf {
+  padding: 30px;
+  display: flex;
+}
+
+.aboutSelf::before {
+  content: '';
+  background-image: url('./assets/img/emoji/EmojiWomen.png');
+  display: block;
+  min-width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.aboutSelfConteiner * {
+  margin-bottom: 8px;
+}
+
+.aboutSelfConteiner *:last-child {
+  margin-bottom: 0;
+}
+
+.aboutSelfConteiner h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.aboutSelfConteiner p {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
 }
