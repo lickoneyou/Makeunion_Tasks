@@ -170,19 +170,40 @@ main {
 }
 
 .borderRed {
-  border-top: 4px solid #CF2727;
+  border-top: 4px solid #cf2727;
 }
 
 .borderOrange {
-  border-top: 4px solid #F4BF00;
+  border-top: 4px solid #f4bf00;
 }
 
 .borderAqua {
-  border-top: 4px solid #19E5E5;
+  border-top: 4px solid #19e5e5;
 }
 
 .borderBlue {
-  border-top: 4px solid #274CCF;
+  border-top: 4px solid #274ccf;
 }
 
+.quote {
+  padding: 30px;
+  display: flex;
+  gap: 15px;
+  border: 1px solid #e4ecf2;
+  background: #f0f9ff;
+}
 
+.quote p {
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.quote::before {
+  content: '';
+  display: block;
+  background-image: url('./assets/img/emoji/Quote.png');
+  min-width: 23.156px;
+  height: 20px;
+}
