@@ -5,12 +5,28 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import '@mantine/core/styles.css'
 import { MantineProvider } from '@mantine/core'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { UserInfoAction } from './components/UserPage/UserInfoAction'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/*",
+    element: <UserInfoAction />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <MantineProvider>
-      <App />
+      <RouterProvider router={router} />
     </MantineProvider>
   </React.StrictMode>,
 )
