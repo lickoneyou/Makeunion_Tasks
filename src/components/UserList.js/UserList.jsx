@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import getRandomAvatar from '../handlers/getAvatar'
+import getAvatar from '../../handlers/getAvatar'
 import { UserInfoIcons } from '../User/UserInfoIcons'
 import styles from './UserList.module.css'
 
@@ -21,11 +21,12 @@ const UserList = () => {
       {users.map((user) => (
         <UserInfoIcons
           key={user.id}
-          avatar={getRandomAvatar(user.id)}
+          avatar={getAvatar(user.id)}
           nickName={user.username}
           name={user.name}
           email={user.email}
           phone={user.phone}
+          id={user.id}
         />
       ))}
     </div>
