@@ -2,9 +2,13 @@
   display: flex;
   align-items: center;
   border-radius: var(--mantine-radius-md);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  border: rem(1px) solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
   padding: var(--mantine-spacing-sm) var(--mantine-spacing-xl);
-  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-5)
+  );
   margin-bottom: var(--mantine-spacing-sm);
 }
 
@@ -18,12 +22,16 @@
   width: rem(60px);
 }
 
-.dndWrapper{
+.dndWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.todoText{
+.dndWrapper > div > div {
+  width: 400px;
+}
+
+.todoText {
   user-select: none;
 }
