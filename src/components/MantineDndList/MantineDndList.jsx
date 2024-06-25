@@ -25,7 +25,7 @@ export function DndList() {
           {(provided) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
               {state.map((item, index) => (
-                <Draggable key={item} index={index} draggableId={item}>
+                <Draggable key={item.id} index={index} draggableId={item.id}>
                   {(provided, snapshot) => (
                     <div
                       className={cx(classes.item, {
@@ -37,7 +37,7 @@ export function DndList() {
                     >
                       <div>
                         <Text c="dimmed" size="sm">
-                          {item}
+                          {item.todo}
                         </Text>
                       </div>
                     </div>
