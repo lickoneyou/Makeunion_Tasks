@@ -1,8 +1,9 @@
 import { Avatar, Text, Group } from '@mantine/core'
 import { IconPhoneCall, IconAt } from '@tabler/icons-react'
 import classes from './UserInfoIcons.module.css'
+import { Link } from "react-router-dom";
 
-export function UserInfoIcons({ avatar, nickName, name, email, phone }) {
+export function UserInfoIcons({ avatar, nickName, name, email, phone, id }) {
   return (
     <div className={classes.userWrapper}>
       <Group wrap="nowrap">
@@ -13,9 +14,8 @@ export function UserInfoIcons({ avatar, nickName, name, email, phone }) {
           </Text>
 
           <Text fz="lg" fw={500} className={classes.name}>
-            {name}
+           <Link to={String(id)}>{name}</Link>
           </Text>
-
           <Group wrap="nowrap" gap={10} mt={3}>
             <IconAt stroke={1.5} size="1rem" className={classes.icon} />
             <Text fz="xs" c="dimmed">
