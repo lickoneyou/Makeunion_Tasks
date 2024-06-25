@@ -11,6 +11,10 @@ function MantineInput() {
         variant="filled"
         onKeyDown={(e) => {
           if (e.code === 'Enter') {
+            if (!e.target.value) {
+              alert('Please add text to your to-do list')
+              return
+            }
             setLocalStorageData(e.target.value)
             e.target.value = ''
           }
