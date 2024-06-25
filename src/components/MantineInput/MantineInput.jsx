@@ -1,8 +1,11 @@
 import { Input } from '@mantine/core'
+import { useDispatch } from 'react-redux'
 import setLocalStorageData from '../../handlers/setLocalStorageData'
 import styles from './MantineInput.module.css'
 
 function MantineInput() {
+  const dispatch = useDispatch('')
+
   return (
     <div className={styles.inputWrapper}>
       <Input
@@ -16,6 +19,7 @@ function MantineInput() {
               return
             }
             setLocalStorageData(e.target.value)
+            dispatch({ type: 'UPDATE' })
             e.target.value = ''
           }
         }}
