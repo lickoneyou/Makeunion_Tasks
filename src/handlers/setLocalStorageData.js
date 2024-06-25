@@ -4,7 +4,7 @@ const setLocalStorageData = (todo, id) => {
   }
 
   const data = JSON.parse(localStorage.getItem('todos'))
-  data.push({todo: todo, id: id})
+  data.push({todo: todo, id: id, completed: false})
   localStorage.setItem('todos', JSON.stringify(data))
 }
 

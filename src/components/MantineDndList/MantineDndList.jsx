@@ -6,6 +6,7 @@ import classes from './DndList.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import deletedTodos from '../../handlers/deletedTodos'
+import CompletedBtn from '../CompletedBtn/CompletedBtn'
 
 export function DndList() {
   const todos = useSelector((data) => data.todos)
@@ -30,9 +31,12 @@ export function DndList() {
                 <Draggable key={item.id} index={index} draggableId={item.id}>
                   {(provided, snapshot) => (
                     <div
-                      className={cx(classes.item, {
-                        [classes.itemDragging]: snapshot.isDragging,
-                      })}
+                      className={cx(
+                        item.completed ? classes.itemCompleted : classes.item,
+                        {
+                          [classes.itemDragging]: snapshot.isDragging,
+                        },
+                      )}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                       ref={provided.innerRef}
@@ -52,6 +56,7 @@ export function DndList() {
                             dispatch({ type: 'UPDATE' })
                           }}
                         />
+                        <CompletedBtn completed={item.completed} id={item.id} />
                       </div>
                     </div>
                   )}
