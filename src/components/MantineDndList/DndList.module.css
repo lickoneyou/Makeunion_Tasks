@@ -30,8 +30,19 @@
 
 .dndWrapper > div > div {
   width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
 }
 
 .todoText {
   user-select: none;
+}
+
+.deletedImg {
+  width: 20px;
 }

@@ -3,11 +3,13 @@ import { Text } from '@mantine/core'
 import { useListState } from '@mantine/hooks'
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd'
 import classes from './DndList.module.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import deletedTodos from '../../handlers/deletedTodos'
 
 export function DndList() {
   const todos = useSelector((data) => data.todos)
+  const dispatch = useDispatch()
   const [state, handlers] = useListState(todos)
 
   useEffect(() => {
@@ -39,6 +41,17 @@ export function DndList() {
                         <Text c="dimmed" size="sm">
                           {item.todo}
                         </Text>
+                      </div>
+                      <div className={classes.btnWrapper}>
+                        <img
+                          className={classes.deletedImg}
+                          src="./img/delete.png"
+                          alt="delete button"
+                          onClick={() => {
+                            deletedTodos(item.id)
+                            dispatch({ type: 'UPDATE' })
+                          }}
+                        />
                       </div>
                     </div>
                   )}
