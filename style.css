@@ -90,9 +90,16 @@ aside {
 
 /* main */
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .aboutSelf {
   padding: 30px;
   display: flex;
+  border: 1px solid #e4ecf2;
 }
 
 .aboutSelf::before {
@@ -125,3 +132,57 @@ aside {
   font-weight: 500;
   line-height: 160%;
 }
+
+.goalsAndProblems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.card {
+  padding: 6px 20px 20px 20px;
+  border: 1px solid #e4ecf2;
+}
+
+.cardImg {
+  margin: 12px 0;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+/* card borders */
+
+.borderGreen {
+  border-top: 4px solid #8fcf27;
+}
+
+.borderRed {
+  border-top: 4px solid #CF2727;
+}
+
+.borderOrange {
+  border-top: 4px solid #F4BF00;
+}
+
+.borderAqua {
+  border-top: 4px solid #19E5E5;
+}
+
+.borderBlue {
+  border-top: 4px solid #274CCF;
+}
+
+
